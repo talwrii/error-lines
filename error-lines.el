@@ -63,7 +63,7 @@
 (require 's)
 (require 'select)
 
-(defface error-lines-face '((:background . "red")) "Face used to highlight error lines")
+(defface error-lines-face '((t ((:background . "red")))) "Face used to highlight error lines")
 (defvar error-lines-overlay 'error-lines-overlay "Identifier for error lines.  Dynamically override this to run independent instances of error lines.")
 
 (defun error-lines-add-lines (lines)
