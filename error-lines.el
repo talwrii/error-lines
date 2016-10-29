@@ -2,7 +2,6 @@
 
 ;; Copyright (C) 2016 Tal Wrii
 
-
 ;; Author: Tal Wrii (talwrii@gmail.com)
 ;; URL: github.com/talwrii/error-lines
 ;; Version: 0.1.0
@@ -60,9 +59,6 @@
 
 ;;; Code:
 
-(eval-when-compile (require 'subr)) ;; for dolist
-
-(require 'subr)
 (require 'dash)
 (require 's)
 (require 'select)
