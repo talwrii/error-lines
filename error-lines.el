@@ -89,7 +89,7 @@
   "Add error lines from a string, LINES-STRING, consisting of a list of numbers separated by spaces or newlines."
   (interactive "sLine numbers to highlight:")
   (setq lines-string (s-replace "\n" " " lines-string))
-  (error-lines-add-lines (mapcar 'parse-integer (s-split " " lines-string t))))
+  (error-lines-add-lines (mapcar 'string-to-number (s-split " " lines-string t))))
 
 (defun error-lines-from-clipboard ()
   "Add error lines from a string in the clipboard (as with `error-lines-from-string')."
