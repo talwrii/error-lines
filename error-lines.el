@@ -63,7 +63,9 @@
 (require 's)
 (require 'select)
 
-(defface error-lines-face '((t ((:background . "red")))) "Face used to highlight error lines")
+(defface error-lines-face '((t :background "red")) "Face used to highlight error lines")
+(set-face-attribute 'error-lines-face nil :background "#770000")
+
 (defvar error-lines-overlay 'error-lines-overlay "Identifier for error lines.  Dynamically override this to run independent instances of error lines.")
 
 (defun error-lines-add-lines (lines)
@@ -88,8 +90,7 @@
 (defun error-lines-from-string (lines-string)
   "Add error lines from a string, LINES-STRING, consisting of a list of numbers separated by spaces or newlines."
   (interactive "sLine numbers to highlight:")
-  (setq lines-string (s-replace "\n" " " lines-string))
-  (error-lines-add-lines (mapcar 'string-to-number (s-split " " lines-string t))))
+  (error-lines-add-lines (mapcar 'string-to-number (s-split "\n" lines-string t))))
 
 (defun error-lines-from-clipboard ()
   "Add error lines from a string in the clipboard (as with `error-lines-from-string')."
