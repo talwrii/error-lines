@@ -174,6 +174,5 @@
     (-filter 'error-lines--overlay-p (overlays-in start end)))
 
 (provide 'error-lines)
-(provide 'error-lines)
 
 ;;; error-lines.el ends here
