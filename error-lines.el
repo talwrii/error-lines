@@ -111,7 +111,7 @@
     (setq overlay (make-overlay beg end nil t))
     (overlay-put overlay 'face 'error-lines-face)
     (overlay-put overlay error-lines-overlay  t)
-    (overlay-put overlay 'priority 100)
+    (overlay-put overlay 'priority -100)
     (overlay-put overlay 'evaporate t)))
 
 (defun error-lines-reset ()
